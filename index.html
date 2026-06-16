@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
   <meta name="description"
     content="Raffay Arshad - Full Stack Engineer building real-time web, desktop, and mobile products with React, Next.js, Node.js, and PostgreSQL." />
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><text x='50' y='65' font-family='monospace' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23f97316'/><stop offset='100%25' stop-color='%23fbbf24'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><text x='50' y='65' font-family='monospace' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -104,7 +104,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-image-wrapper">
-          <img src="./images/Raffay.jpg" alt="Raffay Arshad" class="hero-image" loading="eager" onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><rect width='400' height='400' fill='url(%23g)'/><text x='200' y='250' font-family='monospace' font-size='160' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>&quot;;this.classList.add('loaded')" />
+          <img src="./images/Raffay.jpg" alt="Raffay Arshad" class="hero-image" loading="eager" onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23f97316'/><stop offset='100%25' stop-color='%23fbbf24'/></linearGradient></defs><rect width='400' height='400' fill='url(%23g)'/><text x='200' y='250' font-family='monospace' font-size='160' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>&quot;;this.classList.add('loaded')" />
           <div class="hero-image-border"></div>
         </div>
       </div>
@@ -762,7 +762,7 @@
 
       try {
         const saved = localStorage.getItem("theme");
-        setTheme(saved || (prefersDark ? "dark" : "light"));
+        setTheme(saved || "dark");
       } catch (e) { setTheme("light"); }
 
       themeBtn.addEventListener("click", () => {
