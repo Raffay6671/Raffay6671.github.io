@@ -6,678 +6,952 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raffay Arshad | Full Stack Engineer</title>
   <meta name="description"
-    content="Raffay Arshad - Full Stack Engineer building real-time web, desktop, and mobile products with React, Next.js, Node.js, and PostgreSQL." />
+    content="Raffay Arshad, Full Stack Engineer building AI-powered and real-time products with React, Next.js, Node.js, TypeScript and PostgreSQL. Currently building Outreach, an AI multi-channel outreach platform at QLU.ai." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raffay6671.github.io/" />
+  <meta property="og:title" content="Raffay Arshad | Full Stack Engineer" />
+  <meta property="og:description"
+    content="Full Stack Engineer building AI-powered products for web, desktop and mobile: Outreach, Zoro.ai, QLU World and more." />
+  <meta property="og:image" content="https://raffay6671.github.io/images/Raffay.jpg" />
+  <meta name="twitter:card" content="summary" />
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23f97316'/><stop offset='100%25' stop-color='%23fbbf24'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><text x='50' y='65' font-family='monospace' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ff6b35'/><stop offset='100%25' stop-color='%23ffc15e'/></linearGradient></defs><circle cx='50' cy='50' r='46' fill='url(%23g)'/><text x='50' y='63' font-family='monospace' font-size='38' font-weight='bold' text-anchor='middle' fill='%23170a02'>RA</text></svg>" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="styles.css?v=2026-09-25" />
 </head>
 
 <body>
   <script>document.body.classList.add('js-loaded');</script>
+
   <!-- Header -->
   <header id="header">
-    <div class="container header-content">
-      <a href="#" class="logo">
-        <span class="logo-icon">RA</span>
-        <span class="logo-text">Raffay Arshad</span>
-      </a>
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#certifications" class="nav-link">Certifications</a></li>
-          <li><a href="#achievements" class="nav-link">Achievements</a></li>
-          <li><a href="#blogs" class="nav-link">Publications</a></li>
-          <li class="nav-activity"><a href="#activity" class="nav-link">Activity</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-          </svg>
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
-          </svg>
-        </button>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+    <div class="nav-shell">
+      <div class="nav-bar">
+        <a href="#" class="logo" aria-label="Raffay Arshad, back to top">
+          <span class="logo-mark">RA</span>
+          <span class="logo-name">Raffay Arshad</span>
+        </a>
+        <nav id="nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#outreach" class="nav-link">Outreach</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Stack</a></li>
+            <li><a href="#recognition" class="nav-link">Recognition</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-resume"><a href="./Resume/Raffay_Arshad_Resume.pdf" download="Raffay_Arshad_Resume.pdf" class="nav-link">Download résumé</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" class="icon-btn theme-toggle" aria-label="Toggle theme">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+          </button>
+          <a href="./Resume/Raffay_Arshad_Resume.pdf" download="Raffay_Arshad_Resume.pdf" class="btn btn-primary header-resume">
+            Résumé <i class="fas fa-arrow-down"></i>
+          </a>
+          <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <p class="hero-greeting">
-          <span class="mono">Hello, I'm</span>
-        </p>
-        <h1 class="hero-name">Raffay Arshad<span class="accent-dot">.</span></h1>
-        <h2 class="hero-title">
-          <span class="typing-wrapper">
-            <span id="typed-text"></span><span class="cursor">|</span>
-          </span>
-        </h2>
-        <p class="hero-description">
-          I build real-time products that people actually use — across web, desktop, and mobile.
-          I like owning features from the database all the way up to the screen, with recent work
-          on AI search tools and live collaboration apps built on React, Next.js, Node.js, and PostgreSQL.
-        </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="#projects" class="btn btn-outline">View My Work</a>
-          <a href="./Resume/Raffay_Arshad_Resume.pdf" download="Raffay_Arshad_Resume.pdf" class="btn btn-ghost">
-            <i class="fas fa-download"></i> Resume
-          </a>
-        </div>
-        <div class="hero-links">
-          <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://medium.com/@rafay.abbasi6671" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fab fa-medium"></i></a>
-          <a href="mailto:rafay.abbasi6671@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
-        </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-glow alt"></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-image-wrapper">
-          <img src="./images/Raffay.jpg" alt="Raffay Arshad" class="hero-image" loading="eager" onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23f97316'/><stop offset='100%25' stop-color='%23fbbf24'/></linearGradient></defs><rect width='400' height='400' fill='url(%23g)'/><text x='200' y='250' font-family='monospace' font-size='160' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>&quot;;this.classList.add('loaded')" />
-          <div class="hero-image-border"></div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">01. About</span>
-        <h2 class="section-title">About Me</h2>
-      </div>
-      <div class="about-content reveal">
-        <div class="about-text">
-          <p>
-            I'm a <strong>Full Stack Engineer</strong> based in Islamabad, Pakistan, experienced in building
-            real-time products that people actually use — across web, desktop, and mobile. I like owning
-            features end to end, from the database all the way up to the screen.
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="status-pill reveal"><span class="status-dot"></span> Open to new opportunities</span>
+          <h1 class="hero-name reveal" style="--delay: .05s">Raffay Arshad</h1>
+          <p class="hero-role reveal" style="--delay: .1s">
+            Full Stack Engineer building <span class="serif grad-text">AI-powered</span> products for web, desktop
+            and mobile.
           </p>
-          <p>
-            Most of my recent work has been on AI search tools and live collaboration apps built with
-            React, Next.js, Node.js, and PostgreSQL — with a lot of time spent on audio/video calling,
-            messaging, and making things fast under load. I'm comfortable picking up new stacks and
-            shipping without a lot of hand-holding.
+          <p class="hero-description reveal" style="--delay: .15s">
+            I own features end to end, from PostgreSQL schemas and Node.js services to React, Electron and Flutter
+            apps. Lately: <strong>Outreach</strong>, QLU.ai's AI multi-channel outreach platform, and
+            <strong>Zoro.ai</strong>, an AI meeting assistant I took from architecture to launch.
+          </p>
+          <div class="hero-cta reveal" style="--delay: .2s">
+            <a href="#outreach" class="btn btn-primary">See Outreach <i class="fas fa-arrow-right"></i></a>
+            <a href="#projects" class="btn btn-ghost">All projects</a>
+          </div>
+          <div class="hero-links reveal" style="--delay: .25s">
+            <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://medium.com/@rafay.abbasi6671" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Medium"><i class="fab fa-medium"></i></a>
+            <a href="mailto:rafay.abbasi6671@gmail.com" class="social-btn" aria-label="Email"><i class="far fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--delay: .15s">
+          <div class="portrait">
+            <div class="portrait-frame">
+              <img src="./images/Raffay.jpg" alt="Raffay Arshad" width="400" height="400" loading="eager"
+                onload="this.classList.add('loaded')"
+                onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ff6b35'/><stop offset='100%25' stop-color='%23ffc15e'/></linearGradient></defs><rect width='400' height='400' fill='url(%23g)'/><text x='200' y='250' font-family='monospace' font-size='160' font-weight='bold' text-anchor='middle' fill='white'>RA</text></svg>&quot;;this.classList.add('loaded')" />
+            </div>
+            <div class="float-chip chip-top">
+              <span class="chip-icon"><i class="fas fa-wand-magic-sparkles"></i></span>
+              <span><strong>Building Outreach AI</strong><small>Full Stack Engineer @ QLU.ai</small></span>
+            </div>
+            <div class="float-chip chip-bottom">
+              <span class="chip-icon"><i class="fas fa-layer-group"></i></span>
+              <span><strong>3+ years shipping</strong><small>web · desktop · mobile</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span>Scroll</span><span></span></div>
+    </section>
+
+    <!-- Tech marquee -->
+    <div class="marquee" aria-label="Technologies I use">
+      <div class="marquee-track">
+        <ul class="marquee-group">
+          <li><i class="devicon-react-original"></i> React</li>
+          <li><i class="devicon-nextjs-plain"></i> Next.js</li>
+          <li><i class="devicon-typescript-plain"></i> TypeScript</li>
+          <li><i class="devicon-nodejs-plain"></i> Node.js</li>
+          <li><i class="devicon-postgresql-plain"></i> PostgreSQL</li>
+          <li><i class="devicon-redis-plain"></i> Redis</li>
+          <li><i class="fab fa-aws"></i> AWS</li>
+          <li><i class="devicon-docker-plain"></i> Docker</li>
+          <li><i class="devicon-electron-original"></i> Electron</li>
+          <li><i class="devicon-flutter-plain"></i> Flutter</li>
+          <li><i class="devicon-socketio-original"></i> Socket.IO</li>
+          <li><i class="fas fa-video"></i> LiveKit</li>
+          <li><i class="fas fa-wand-magic-sparkles"></i> LLMs</li>
+        </ul>
+        <ul class="marquee-group" aria-hidden="true">
+          <li><i class="devicon-react-original"></i> React</li>
+          <li><i class="devicon-nextjs-plain"></i> Next.js</li>
+          <li><i class="devicon-typescript-plain"></i> TypeScript</li>
+          <li><i class="devicon-nodejs-plain"></i> Node.js</li>
+          <li><i class="devicon-postgresql-plain"></i> PostgreSQL</li>
+          <li><i class="devicon-redis-plain"></i> Redis</li>
+          <li><i class="fab fa-aws"></i> AWS</li>
+          <li><i class="devicon-docker-plain"></i> Docker</li>
+          <li><i class="devicon-electron-original"></i> Electron</li>
+          <li><i class="devicon-flutter-plain"></i> Flutter</li>
+          <li><i class="devicon-socketio-original"></i> Socket.IO</li>
+          <li><i class="fas fa-video"></i> LiveKit</li>
+          <li><i class="fas fa-wand-magic-sparkles"></i> LLMs</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">About</span>
+          <h2 class="section-title">An engineer who ships <span class="serif grad-text">end to end.</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a <strong>Full Stack Engineer</strong> in Islamabad, Pakistan. I like owning a feature from the
+              database all the way to the screen, and I'm happiest where AI meets real-time systems: answers
+              streamed token by token over SSE, live audio and video on LiveKit, and messaging pipelines that must
+              never send twice.
+            </p>
+            <p>
+              At <strong>QLU.ai</strong> I've shipped across web, desktop and mobile, from Flutter apps on both app
+              stores to an Electron virtual office. Today I'm building <strong>Outreach</strong>, an AI
+              multi-channel outreach platform, and the Message Hub behind it. I pick up new stacks fast and ship
+              without much hand-holding.
+            </p>
+          </div>
+          <div class="stats reveal" style="--delay: .1s">
+            <div class="stat">
+              <span class="stat-value"><span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span></span>
+              <span class="stat-label">Years of experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"><span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span></span>
+              <span class="stat-label">Flagship products</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"><span class="stat-number" data-count="3">0</span></span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"><span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span></span>
+              <span class="stat-label">Platforms shipped</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Experience</span>
+          <h2 class="section-title">Where I've <span class="serif grad-text">worked.</span></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-when"><span class="now">Oct 2024 — Present</span></div>
+            <div>
+              <div class="tl-head">
+                <span class="tl-logo current">QL</span>
+                <div>
+                  <h3 class="tl-role">Full Stack Engineer</h3>
+                  <p class="tl-org"><a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer">QLU.ai</a> · Islamabad, Pakistan</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li>Building <a href="#outreach">Outreach</a>, QLU's AI multi-channel outreach platform, and the Message Hub service behind it: sequences across Gmail, Outlook, LinkedIn and Recruiter InMail, AI-written messages and AI reply classification</li>
+                <li>Architected and launched <strong>Zoro.ai</strong>, a standalone AI meeting assistant that auto-joins sessions via calendar sync, records to AWS S3 and generates AI notes, summaries and transcripts</li>
+                <li>Engineered an AI-powered talent search that turns natural-language queries into structured multi-step searches, streaming reasoning, text, tables and charts over SSE</li>
+                <li>Optimized API performance to handle 80,000+ data items in a single call through query tuning, batching and caching of hot aggregations</li>
+                <li>Built <strong>QLU World</strong> (Electron desktop and Flutter mobile virtual office) and <strong>QLU Social</strong>, with LiveKit audio/video, screen sharing and MQTT-over-WebSocket messaging</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-when">Aug 2024 — Oct 2024</div>
+            <div>
+              <div class="tl-head">
+                <span class="tl-logo">CH</span>
+                <div>
+                  <h3 class="tl-role">Fellowship Associate, Full Stack Development</h3>
+                  <p class="tl-org"><span class="org-name">CodeHuddle</span> · Islamabad, Pakistan</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li>Developed React and Next.js components with Tailwind CSS and integrated them with Node.js services</li>
+                <li>Wrote unit tests for the flagship product "Gymyg", raising test coverage to protect reliability</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-when">May 2023 — Jun 2024</div>
+            <div>
+              <div class="tl-head">
+                <span class="tl-logo">FT</span>
+                <div>
+                  <h3 class="tl-role">Full Stack Developer</h3>
+                  <p class="tl-org"><span class="org-name">Funsol Technologies</span> · Islamabad, Pakistan</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li>Designed and shipped React and Node.js dashboard modules for product statistics, VPN usage analytics and key business metrics</li>
+                <li>Re-architected core data-fetching flows and optimized backend queries, cutting load times and speeding up feature rollouts</li>
+                <li>Refactored shared frontend components into a reusable structure that made new dashboard views faster to build</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-when">Sep 2023 — Jan 2024</div>
+            <div>
+              <div class="tl-head">
+                <span class="tl-logo">FN</span>
+                <div>
+                  <h3 class="tl-role">Lab Demonstrator, x86 Assembly Language</h3>
+                  <p class="tl-org"><a href="https://www.nu.edu.pk/" target="_blank" rel="noopener noreferrer">FAST-NUCES</a> · Islamabad, Pakistan · On-site</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li>Ran the x86 Assembly Language lab, sharpening my own low-level programming and problem-solving</li>
+                <li>Helped students grasp core programming concepts and taught them how to find and fix bugs in their code</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-when">Feb 2023 — May 2023</div>
+            <div>
+              <div class="tl-head">
+                <span class="tl-logo">PM</span>
+                <div>
+                  <h3 class="tl-role">Web Development Intern</h3>
+                  <p class="tl-org"><a href="https://premed.pk/" target="_blank" rel="noopener noreferrer">PreMed.PK</a> · Islamabad, Pakistan · Remote</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li>Built and maintained web features on the MERN stack (MongoDB, Express, React, Node.js)</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship: Outreach -->
+    <section id="outreach" class="feature">
+      <div class="container">
+        <div class="feature-top">
+          <div class="reveal">
+            <span class="feature-badge"><i class="fas fa-wand-magic-sparkles"></i> Flagship AI product · QLU.ai</span>
+            <h2 class="feature-title">Outreach</h2>
+            <p class="feature-tagline">AI-powered outreach across email and LinkedIn that <span class="serif">knows when to stop.</span></p>
+          </div>
+          <div class="reveal" style="--delay: .1s">
+            <p class="feature-desc">
+              Recruiters build one sequence that mixes LinkedIn invites, messages and InMail with Gmail and Outlook
+              emails. AI drafts every message for the person receiving it and reads every reply, and the moment
+              someone answers on any channel, every pending follow-up stops.
+            </p>
+            <div class="tech-row">
+              <span>React</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>Next.js</span><span>Socket.IO</span><span>Chrome MV3</span>
+            </div>
+          </div>
+        </div>
+
+        <figure class="product-shot reveal">
+          <div class="shot-frame">
+          <div class="shot-window">
+            <div class="shot-bar">
+              <div class="shot-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="shot-url"><i class="fas fa-lock"></i> outreach / campaigns / senior-backend-engineers</div>
+              <div class="shot-live">Live</div>
+            </div>
+            <div class="shot-body">
+              <div class="shot-side" aria-hidden="true">
+                <span class="on"><i class="fas fa-paper-plane"></i></span>
+                <span><i class="fas fa-inbox"></i></span>
+                <span><i class="fas fa-users"></i></span>
+                <span><i class="fas fa-chart-simple"></i></span>
+                <span class="shot-side-spacer"></span>
+                <span><i class="fas fa-gear"></i></span>
+              </div>
+
+              <div class="shot-main">
+                <div class="shot-head">
+                  <div>
+                    <p class="shot-kicker">Campaign · 4 rounds</p>
+                    <h4>Senior Backend Engineers</h4>
+                  </div>
+                  <div class="shot-pills">
+                    <span>4 channels</span>
+                    <span>AI copy on</span>
+                  </div>
+                </div>
+                <ol class="seq">
+                  <li class="seq-step">
+                    <span class="ch ch-li"><i class="fab fa-linkedin-in"></i></span>
+                    <div><b>Connection request</b><small>Day 1 · LinkedIn</small></div>
+                    <span class="tag ok">Sent</span>
+                  </li>
+                  <li class="seq-step">
+                    <span class="ch ch-gm"><i class="fab fa-google"></i></span>
+                    <div>
+                      <b>Personalized email</b><small>Day 3 · Gmail</small>
+                      <p class="ai-draft"><i class="fas fa-wand-magic-sparkles"></i>Hi Ava, congrats on shipping
+                        <mark>Northwind's payments rewrite</mark>. We're hiring a staff engineer to lead a migration
+                        just like it…</p>
+                    </div>
+                    <span class="tag ai">AI-written</span>
+                  </li>
+                  <li class="seq-step active">
+                    <span class="ch ch-lir">in</span>
+                    <div><b>Recruiter InMail + JD.pdf</b><small>Day 6 · LinkedIn Recruiter</small></div>
+                    <span class="tag wait">Scheduled</span>
+                  </li>
+                  <li class="seq-step muted">
+                    <span class="ch ch-ol"><i class="fab fa-microsoft"></i></span>
+                    <div><b>Follow-up</b><small>Day 9 · Outlook</small></div>
+                    <span class="tag stop">Stops on reply</span>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="shot-inbox">
+                <p class="shot-kicker"><i class="fas fa-inbox"></i> Unified inbox <span class="ai-note">✦ AI-sorted</span></p>
+                <div class="reply">
+                  <span class="avatar">AT</span>
+                  <div>
+                    <div class="reply-top"><b>Ava Thompson</b><span class="via">LinkedIn</span></div>
+                    <p>Sounds interesting. Free for a call Thursday?</p>
+                    <span class="intent pos">Interested</span>
+                  </div>
+                </div>
+                <div class="reply">
+                  <span class="avatar b2">LM</span>
+                  <div>
+                    <div class="reply-top"><b>Leo Martins</b><span class="via">Gmail</span></div>
+                    <p>Out of office until Monday, will reply then.</p>
+                    <span class="intent ooo">Out of office</span>
+                  </div>
+                </div>
+                <div class="reply">
+                  <span class="avatar b3">PN</span>
+                  <div>
+                    <div class="reply-top"><b>Priya Nair</b><span class="via">Outlook</span></div>
+                    <p>Not looking right now, but thanks!</p>
+                    <span class="intent neg">Not interested</span>
+                  </div>
+                </div>
+                <div class="auto-stop">
+                  <i class="fas fa-hand"></i>
+                  <span><b>Ava replied on LinkedIn.</b> Her InMail and Outlook follow-ups were stopped automatically.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shot-note n1"><i class="fas fa-wand-magic-sparkles"></i> Drafted by AI for each person</div>
+          <div class="shot-note n2"><i class="fas fa-brain"></i> Every reply read and classified</div>
+          </div>
+          <figcaption class="shot-caption">Illustrative interface with sample data. Real customer data stays private.</figcaption>
+        </figure>
+
+        <div class="metric-strip reveal">
+          <div class="metric">
+            <div class="metric-value">4 <small>channels</small></div>
+            <p class="metric-label">Gmail, Outlook, LinkedIn and Recruiter InMail in one sequence</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value">7 <small>touch types</small></div>
+            <p class="metric-label">From invites and InMail to post likes and profile views</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value">6 <small>reply intents</small></div>
+            <p class="metric-label">Told apart by AI, from interested to wrong contact</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value">1 <small>API</small></div>
+            <p class="metric-label">Every send and every reply goes through the Message Hub</p>
+          </div>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap reveal">
+            <span class="cap-icon"><i class="fas fa-route"></i></span>
+            <h3>Multi-channel sequences</h3>
+            <p>Mix LinkedIn invites, messages, post likes, profile views, Recruiter InMail, Gmail and Outlook in one timed sequence, with attachments where the channel allows them.</p>
+          </article>
+          <article class="cap reveal" style="--delay: .06s">
+            <span class="cap-icon"><i class="fas fa-wand-magic-sparkles"></i></span>
+            <span class="cap-ai">AI</span>
+            <h3>AI-personalized copy</h3>
+            <p>Every message is drafted by AI for the person receiving it, and stays editable in a rich-text editor before anything is sent.</p>
+          </article>
+          <article class="cap reveal" style="--delay: .12s">
+            <span class="cap-icon"><i class="fas fa-brain"></i></span>
+            <span class="cap-ai">AI</span>
+            <h3>Reply intelligence</h3>
+            <p>AI reads each reply and sorts it: interested, not interested, out of office, deferred, wrong contact or ambiguous.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-icon"><i class="fas fa-hand"></i></span>
+            <h3>Stops on any reply</h3>
+            <p>A reply on LinkedIn stops the Gmail and Outlook follow-ups too, so nobody gets chased after they've already answered.</p>
+          </article>
+          <article class="cap reveal" style="--delay: .06s">
+            <span class="cap-icon"><i class="fas fa-shield-halved"></i></span>
+            <h3>Idempotent Message Hub</h3>
+            <p>One service owns every send and reply. An idempotency key travels through every hop, so a retry can never deliver the same message twice.</p>
+          </article>
+          <article class="cap reveal" style="--delay: .12s">
+            <span class="cap-icon"><i class="fas fa-plug"></i></span>
+            <h3>Native integrations</h3>
+            <p>Gmail API and Microsoft Graph over OAuth 2.0 with native threading, plus a Manifest V3 Chrome extension that runs LinkedIn actions pushed over Socket.IO.</p>
+          </article>
+        </div>
+
+        <div class="arch reveal">
+          <div class="arch-head">
+            <h3>How a message travels</h3>
+            <p>The same idempotency key rides along every hop, so any hop can retry safely.</p>
+          </div>
+          <div class="arch-flow">
+            <div class="arch-node">
+              <span class="arch-step">01</span>
+              <h4>Outreach app</h4>
+              <p>React · Redux Toolkit · TanStack Query</p>
+            </div>
+            <div class="arch-link" aria-hidden="true"></div>
+            <div class="arch-node">
+              <span class="arch-step">02</span>
+              <h4>Campaign engine</h4>
+              <p>Node.js · Express · BullMQ · Redis · PostgreSQL</p>
+            </div>
+            <div class="arch-link" aria-hidden="true"></div>
+            <div class="arch-node hub">
+              <span class="arch-step">03</span>
+              <h4>Message Hub</h4>
+              <p>One API · idempotency keys · ordered event log</p>
+            </div>
+            <div class="arch-link" aria-hidden="true"></div>
+            <div class="arch-node">
+              <span class="arch-step">04</span>
+              <h4>Channels</h4>
+              <ul>
+                <li><i class="fab fa-google"></i>Gmail API</li>
+                <li><i class="fab fa-microsoft"></i>Microsoft Graph</li>
+                <li><i class="fab fa-chrome"></i>Chrome extension → LinkedIn</li>
+              </ul>
+            </div>
+          </div>
+          <p class="arch-return">
+            <i class="fas fa-arrow-left-long"></i>
+            Replies, reads and bounces flow back as events
+            <i class="fas fa-angle-right"></i>
+            <strong class="grad-text">AI classifies the intent</strong>
+            <i class="fas fa-angle-right"></i>
+            the sequence stops on every channel
           </p>
         </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Flagship Products</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-count="3">0</span><span class="stat-suffix"></span>
-            <span class="stat-label">Companies</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Platforms Shipped</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">02. Experience</span>
-        <h2 class="section-title">Where I've Worked</h2>
-      </div>
-
-      <div class="experience-list">
-        <!-- Full Stack Engineer @ QLU.ai -->
-        <div class="exp-card reveal">
-          <div class="exp-header">
-            <div class="exp-meta">
-              <h3 class="exp-role">Full Stack Engineer</h3>
-              <a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer" class="exp-company">@ QLU.ai <span class="exp-location">Islamabad, Pakistan</span></a>
-            </div>
-            <span class="exp-date mono">Oct 2024 — Present</span>
+        <div class="role reveal">
+          <div>
+            <h3>My part</h3>
+            <p class="role-intro">What I've built and owned on Outreach at QLU.ai.</p>
           </div>
-          <ul class="exp-details">
-            <li>Build and maintain scalable real-time web and desktop products with React, Electron, Node.js, Express, PostgreSQL, and WebSockets — low-latency messaging, live collaboration, and persistent shared state across platforms</li>
-            <li>Architected and launched <strong>Zoro.ai</strong>, a standalone AI meeting assistant that auto-joins sessions via calendar sync, captures recordings to AWS S3, and generates AI notes, summaries, and transcripts</li>
-            <li>Engineered an AI-powered talent search that converts natural-language queries into structured, multi-step searches, streaming multi-modal results (reasoning, text, tables, charts) over SSE through an AI-driven filter loop</li>
-            <li>Optimized API performance to handle 80,000+ data items in a single call via query tuning, batching, and caching of hot aggregations</li>
-            <li>Built QLU Social (Flutter) and <strong>QLU World</strong>, a virtual-office mobile app — real-time chat, audio/video calls via LiveKit, screen-sharing, and MQTT-over-WebSocket messaging</li>
-          </ul>
-        </div>
-
-        <!-- Fellowship Associate @ CodeHuddle -->
-        <div class="exp-card reveal">
-          <div class="exp-header">
-            <div class="exp-meta">
-              <h3 class="exp-role">Fellowship Associate — Full Stack Development</h3>
-              <span class="exp-company">@ CodeHuddle <span class="exp-location">Islamabad, Pakistan</span></span>
-            </div>
-            <span class="exp-date mono">Aug 2024 — Oct 2024</span>
-          </div>
-          <ul class="exp-details">
-            <li>Developed dynamic frontend components in React and integrated backend services with Node.js, building responsive interfaces with Tailwind CSS and Next.js</li>
-            <li>Contributed to the flagship product "Gymyg" by writing robust unit tests and raising test coverage to safeguard reliability</li>
-          </ul>
-        </div>
-
-        <!-- Full Stack Developer @ Funsol Technologies -->
-        <div class="exp-card reveal">
-          <div class="exp-header">
-            <div class="exp-meta">
-              <h3 class="exp-role">Full Stack Developer</h3>
-              <span class="exp-company">@ Funsol Technologies <span class="exp-location">Islamabad, Pakistan</span></span>
-            </div>
-            <span class="exp-date mono">May 2023 — Jun 2024</span>
-          </div>
-          <ul class="exp-details">
-            <li>Designed and shipped interactive dashboard modules in React and Node.js surfacing product statistics, VPN usage analytics, and key business metrics</li>
-            <li>Re-architected core data-fetching flows and optimized backend query handling, reducing load times and enabling faster, more reliable feature rollouts</li>
-            <li>Refactored shared frontend components into a reusable structure, improving maintainability and accelerating delivery of new dashboard views</li>
-          </ul>
-        </div>
-
-        <!-- Lab Demonstrator @ FAST-NUCES -->
-        <div class="exp-card reveal">
-          <div class="exp-header">
-            <div class="exp-meta">
-              <h3 class="exp-role">Lab Demonstrator — x86 Assembly Language</h3>
-              <a href="https://www.nu.edu.pk/" target="_blank" rel="noopener noreferrer" class="exp-company">@ FAST-NUCES <span class="exp-location">Islamabad, Pakistan · On-site</span></a>
-            </div>
-            <span class="exp-date mono">Sep 2023 — Jan 2024</span>
-          </div>
-          <ul class="exp-details">
-            <li>Demonstrated the x86 Assembly Language lab, sharpening my own programming and problem-solving abilities</li>
-            <li>Helped students grasp core programming concepts and taught them how to find and fix code issues — a key skill for any developer</li>
-          </ul>
-        </div>
-
-        <!-- Web Development Intern @ PreMed.PK -->
-        <div class="exp-card reveal">
-          <div class="exp-header">
-            <div class="exp-meta">
-              <h3 class="exp-role">Web Development Intern</h3>
-              <a href="https://premed.pk/" target="_blank" rel="noopener noreferrer" class="exp-company">@ PreMed.PK <span class="exp-location">Islamabad, Pakistan · Remote</span></a>
-            </div>
-            <span class="exp-date mono">Feb 2023 — May 2023</span>
-          </div>
-          <ul class="exp-details">
-            <li>Built and maintained web features using the MERN stack (MongoDB, Express, React, Node.js)</li>
+          <ul class="role-list">
+            <li><i class="fas fa-circle-check"></i><span>Shipped campaign features across all four channels, including LinkedIn Recruiter InMail with file attachments.</span></li>
+            <li><i class="fas fa-circle-check"></i><span>Integrated Gmail, Outlook and LinkedIn sending and reply detection with the Message Hub, and verified each channel end to end.</span></li>
+            <li><i class="fas fa-circle-check"></i><span>Built Recruiter InMail credit tracking across three services: the extension server, the hub and the Next.js inbox.</span></li>
+            <li><i class="fas fa-circle-check"></i><span>Traced production issues to their root cause, from misclassified email replies to LinkedIn rate limits and bounced prospects missing from the campaign board.</span></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">03. Projects</span>
-        <h2 class="section-title">What I've Built</h2>
-      </div>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2 class="section-title">More products I've <span class="serif grad-text">shipped.</span></h2>
+          <p class="section-sub">AI assistants, real-time collaboration and mobile apps, from Next.js dashboards to Flutter apps live on both app stores.</p>
+        </div>
 
-      <div class="projects-grid">
+        <div class="bento">
+          <article class="project-card wide featured-first reveal" data-images='["./images/Zoro-ai/4.png","./images/Zoro-ai/1.png","./images/Zoro-ai/2.png","./images/Zoro-ai/3.png","./images/Zoro-ai/5.png","./images/Zoro-ai/6.png"]'>
+            <div class="project-cover" data-gallery role="button" tabindex="0" aria-label="Open Zoro.ai gallery">
+              <img src="./images/Zoro-ai/4.png" alt="Zoro.ai meeting view with AI summary next to the recording" loading="lazy" width="1507" height="686" />
+              <span class="cover-hint"><i class="fas fa-images"></i> View gallery</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge ai">AI</span><span class="badge">Launched</span></div>
+                <div class="project-links">
+                  <a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer" aria-label="Zoro.ai on qlu.ai"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">Zoro.ai</h3>
+              <p class="project-subtitle">Standalone AI meeting assistant</p>
+              <p class="project-description">
+                Bots sync with your calendar or take a meeting link, then join, record and stream the session.
+                Recordings land in AWS S3 and come back as transcripts, summaries and notes you can refine with
+                "Edit with AI".
+              </p>
+              <div class="project-tech"><span>Next.js</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>AWS S3</span></div>
+            </div>
+          </article>
 
-        <div class="project-card reveal" data-images='["./images/talent-insights/1.png","./images/talent-insights/2.png","./images/talent-insights/3.png","./images/talent-insights/4.png","./images/talent-insights/5.png","./images/talent-insights/6.png"]'>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+          <article class="project-card wide reveal" style="--delay: .08s" data-images='["./images/talent-insights/4.png","./images/talent-insights/1.png","./images/talent-insights/2.png","./images/talent-insights/3.png","./images/talent-insights/5.png","./images/talent-insights/6.png"]'>
+            <div class="project-cover" data-gallery role="button" tabindex="0" aria-label="Open Talent Intelligence gallery">
+              <img src="./images/talent-insights/4.png" alt="AI talent search answer with a streamed bar chart" loading="lazy" width="1060" height="647" />
+              <span class="cover-hint"><i class="fas fa-images"></i> View gallery</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge ai">AI</span><span class="badge">Streaming</span></div>
+                <div class="project-links">
+                  <a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer" aria-label="Talent Intelligence on qlu.ai"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">Talent Intelligence Platform</h3>
+              <p class="project-subtitle">Conversational AI talent search</p>
+              <p class="project-description">
+                Ask in plain English and an AI filter loop turns it into structured multi-step searches, streaming
+                back reasoning, text, tables and charts over SSE. A 15+ event typed protocol drives dual-stream
+                generation with independent cancellation.
+              </p>
+              <div class="project-tech"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>SSE</span><span>TanStack Query</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-images='["./images/Qlu-World-Desktop/3.png","./images/Qlu-World-Desktop/1.png","./images/Qlu-World-Desktop/2.png","./images/Qlu-World-Desktop/4.png","./images/Qlu-World-Desktop/5.png"]'>
+            <div class="project-cover" data-gallery role="button" tabindex="0" aria-label="Open QLU World Desktop gallery">
+              <img src="./images/Qlu-World-Desktop/3.png" alt="QLU World desktop shared canvas with live video tiles" loading="lazy" width="584" height="345" />
+              <span class="cover-hint"><i class="fas fa-images"></i> View gallery</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge">Real-time</span></div>
+                <div class="project-links">
+                  <a href="https://www.qlu.ai/virtual-office" target="_blank" rel="noopener noreferrer" aria-label="QLU World website"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">QLU World Desktop</h3>
+              <p class="project-subtitle">Virtual office · Electron + React</p>
+              <p class="project-description">
+                Knock-to-join rooms, LiveKit audio and video, in-call screen sharing, AI-assisted scheduling and a
+                shared canvas for remote teams.
+              </p>
+              <div class="project-tech"><span>Electron</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>LiveKit</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: .08s" data-images='["./images/Qlu-World-Mobile/1.png","./images/Qlu-World-Mobile/2.png","./images/Qlu-World-Mobile/3.png"]'>
+            <div class="project-cover" data-gallery role="button" tabindex="0" aria-label="Open QLU World Mobile gallery">
+              <span class="cover-phones">
+                <img src="./images/Qlu-World-Mobile/2.png" alt="" loading="lazy" width="300" height="649" />
+                <img src="./images/Qlu-World-Mobile/1.png" alt="QLU World mobile app screens" loading="lazy" width="300" height="649" />
+                <img src="./images/Qlu-World-Mobile/3.png" alt="" loading="lazy" width="300" height="649" />
+              </span>
+              <span class="cover-hint"><i class="fas fa-images"></i> View gallery</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge">Mobile</span></div>
+                <div class="project-links">
+                  <a href="https://play.google.com/store/apps/details?id=ai.qlu.qluworld.android&hl=en" target="_blank" rel="noopener noreferrer" aria-label="QLU World on Google Play"><i class="fab fa-google-play"></i></a>
+                  <a href="https://apps.apple.com/us/app/qlu-world/id6753807356" target="_blank" rel="noopener noreferrer" aria-label="QLU World on the App Store"><i class="fab fa-app-store-ios"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">QLU World Mobile</h3>
+              <p class="project-subtitle">Virtual office · iOS &amp; Android</p>
+              <p class="project-description">
+                The same office in your pocket: Flutter with BLoC for chat, calls and screen sharing on a Node.js
+                and PostgreSQL backend. Live on both app stores.
+              </p>
+              <div class="project-tech"><span>Flutter</span><span>BLoC</span><span>Node.js</span><span>PostgreSQL</span><span>LiveKit</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: .16s" data-images='["./images/Qlu-Social-app/1.png","./images/Qlu-Social-app/2.png","./images/Qlu-Social-app/3.png","./images/Qlu-Social-app/4.png"]'>
+            <div class="project-cover" data-gallery role="button" tabindex="0" aria-label="Open QLU Social gallery">
+              <span class="cover-phones">
+                <img src="./images/Qlu-Social-app/3.png" alt="" loading="lazy" width="300" height="650" />
+                <img src="./images/Qlu-Social-app/1.png" alt="QLU Social app screens" loading="lazy" width="300" height="650" />
+                <img src="./images/Qlu-Social-app/4.png" alt="" loading="lazy" width="300" height="650" />
+              </span>
+              <span class="cover-hint"><i class="fas fa-images"></i> View gallery</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge">Mobile</span></div>
+                <div class="project-links">
+                  <a href="https://play.google.com/store/apps/details?id=qlupod.user.v1&hl=en" target="_blank" rel="noopener noreferrer" aria-label="QLU Social on Google Play"><i class="fab fa-google-play"></i></a>
+                  <a href="https://apps.apple.com/us/app/qlu-social/id6472044990" target="_blank" rel="noopener noreferrer" aria-label="QLU Social on the App Store"><i class="fab fa-app-store-ios"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">QLU Social</h3>
+              <p class="project-subtitle">Professional networking · iOS &amp; Android</p>
+              <p class="project-description">
+                Networking app with live audio and video rooms on LiveKit, Firebase Authentication and push
+                notifications, built in Flutter on Node.js and PostgreSQL.
+              </p>
+              <div class="project-tech"><span>Flutter</span><span>Node.js</span><span>PostgreSQL</span><span>LiveKit</span><span>Firebase</span></div>
+            </div>
+          </article>
+
+          <article class="project-card full reveal">
+            <div class="project-cover" aria-hidden="true">
+              <div class="svc-diagram">
+                <div class="svc-map">
+                  <span class="svc gateway"><i class="fas fa-shuffle"></i> api-gateway</span>
+                  <span class="svc-bus"></span>
+                  <span class="svc"><i class="fas fa-user-doctor"></i> doctors-svc</span>
+                  <span class="svc"><i class="fas fa-calendar-check"></i> appointments-svc</span>
+                  <span class="svc"><i class="fab fa-docker"></i> docker</span>
+                  <span class="svc"><i class="fas fa-rotate"></i> ci/cd</span>
+                </div>
               </div>
             </div>
-            <h3 class="project-title">Talent Intelligence Platform</h3>
-            <p class="project-subtitle">Conversational AI Talent Search @ QLU.ai</p>
-            <p class="project-description">
-              Conversational AI platform that converts natural-language queries into structured, multi-step
-              searches, streaming multi-modal answers (reasoning, text, tables, charts) over SSE through an
-              AI-driven filter loop. Core streaming engine runs a 15+ event typed protocol with dual-stream
-              parallel generation, independent cancellation, and token-by-token rendering via TanStack Query.
-            </p>
-            <div class="project-tech">
-              <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>SSE</span><span>TanStack Query</span>
-            </div>
-            <button class="btn-view-gallery"><i class="fas fa-images"></i> View Gallery</button>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-images='["./images/Qlu-World-Mobile/1.png","./images/Qlu-World-Mobile/2.png","./images/Qlu-World-Mobile/3.png"]'>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://play.google.com/store/apps/details?id=ai.qlu.qluworld.android&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
-                <a href="https://apps.apple.com/us/app/qlu-world/id6753807356" target="_blank" rel="noopener noreferrer" aria-label="App Store"><i class="fab fa-app-store-ios"></i></a>
+            <div class="project-body">
+              <div class="project-meta">
+                <div class="badges"><span class="badge">DevOps</span></div>
+                <div class="project-links">
+                  <a href="https://github.com/Raffay6671/DevopsProject-Doctor-Appointment-System" target="_blank" rel="noopener noreferrer" aria-label="Doctor Appointments on GitHub"><i class="fab fa-github"></i></a>
+                </div>
               </div>
+              <h3 class="project-title">Doctor Appointments</h3>
+              <p class="project-subtitle">Microservices architecture</p>
+              <p class="project-description">
+                A scalable web app split into containerized microservices, with CI/CD and cross-service
+                communication for browsing doctors and booking appointments.
+              </p>
+              <div class="project-tech"><span>Microservices</span><span>Docker</span><span>CI/CD</span><span>Node.js</span><span>DevOps</span></div>
             </div>
-            <h3 class="project-title">QLU World Mobile</h3>
-            <p class="project-subtitle">Virtual Office App · iOS &amp; Android</p>
-            <p class="project-description">
-              Next-generation virtual office mobile app built in Flutter with BLoC state management on a
-              Node.js/Express and PostgreSQL backend — enabling chat, audio/video calls, screen-sharing,
-              and interactive workspaces. Live on the App Store and Google Play.
-            </p>
-            <div class="project-tech">
-              <span>Flutter</span><span>BLoC</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>LiveKit</span>
-            </div>
-            <button class="btn-view-gallery"><i class="fas fa-images"></i> View Gallery</button>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-images='["./images/Qlu-World-Desktop/1.png","./images/Qlu-World-Desktop/2.png","./images/Qlu-World-Desktop/3.png","./images/Qlu-World-Desktop/4.png","./images/Qlu-World-Desktop/5.png"]'>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://www.qlu.ai/virtual-office" target="_blank" rel="noopener noreferrer" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-            <h3 class="project-title">QLU World Desktop</h3>
-            <p class="project-subtitle">Virtual Office App · Desktop (Electron + React)</p>
-            <p class="project-description">
-              Desktop build of the QLU World virtual office, built with Electron and React on a
-              Node.js/Express and PostgreSQL backend. Features instant "knock-to-join" connections,
-              AI-assisted meeting scheduling, in-call screen-sharing, and immersive collaborative
-              workspaces powered by LiveKit for ultra-low-latency audio/video.
-            </p>
-            <div class="project-tech">
-              <span>Electron</span><span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>LiveKit</span>
-            </div>
-            <button class="btn-view-gallery"><i class="fas fa-images"></i> View Gallery</button>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-images='["./images/Qlu-Social-app/1.png","./images/Qlu-Social-app/2.png","./images/Qlu-Social-app/3.png","./images/Qlu-Social-app/4.png"]'>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://play.google.com/store/apps/details?id=qlupod.user.v1&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
-                <a href="https://apps.apple.com/us/app/qlu-social/id6472044990" target="_blank" rel="noopener noreferrer" aria-label="App Store"><i class="fab fa-app-store-ios"></i></a>
-              </div>
-            </div>
-            <h3 class="project-title">QLU Social</h3>
-            <p class="project-subtitle">Professional Networking App · iOS</p>
-            <p class="project-description">
-              Social networking mobile app built in Flutter on a Node.js/Express and PostgreSQL backend,
-              with Firebase Authentication and push notifications. Integrated LiveKit for crystal-clear
-              live audio/video sessions, enabling seamless real-time networking and immersive event
-              participation across platforms.
-            </p>
-            <div class="project-tech">
-              <span>Flutter</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>LiveKit</span><span>Firebase</span>
-            </div>
-            <button class="btn-view-gallery"><i class="fas fa-images"></i> View Gallery</button>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-images='["./images/Zoro-ai/1.png","./images/Zoro-ai/2.png","./images/Zoro-ai/3.png","./images/Zoro-ai/4.png","./images/Zoro-ai/5.png","./images/Zoro-ai/6.png"]'>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://www.qlu.ai/" target="_blank" rel="noopener noreferrer" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-            <h3 class="project-title">Zoro.ai</h3>
-            <p class="project-subtitle">Standalone AI Meeting Assistant</p>
-            <p class="project-description">
-              Automated bot orchestration system that syncs with user calendars and processes direct meeting
-              links to autonomously join, record, and stream live sessions. Media pipeline uses AWS S3 for AI
-              processing handovers, integrated with a PostgreSQL-backed dashboard for transcript visualization
-              and real-time "Edit with AI" refinement.
-            </p>
-            <div class="project-tech">
-              <span>Next.js</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>AWS S3</span>
-            </div>
-            <button class="btn-view-gallery"><i class="fas fa-images"></i> View Gallery</button>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-card-inner">
-            <div class="project-top">
-              <i class="fas fa-folder-open project-icon"></i>
-              <div class="project-links">
-                <a href="https://github.com/Raffay6671/DevopsProject-Doctor-Appointment-System" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <h3 class="project-title">Doctor Appointments</h3>
-            <p class="project-subtitle">Microservices Architecture</p>
-            <p class="project-description">
-              Scalable web app using microservices architecture with containerization, CI/CD,
-              and cross-service communication for viewing doctors and appointments.
-            </p>
-            <div class="project-tech">
-              <span>Microservices</span><span>Docker</span><span>CI/CD</span><span>Node.js</span><span>DevOps</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">04. Skills</span>
-        <h2 class="section-title">Technologies I Work With</h2>
-      </div>
-
-      <div class="skills-content reveal">
-        <div class="skill-category">
-          <h3 class="skill-category-title">Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
-            <span class="skill-tag"><i class="devicon-typescript-plain"></i> TypeScript</span>
-            <span class="skill-tag"><i class="devicon-dart-plain"></i> Dart</span>
-            <span class="skill-tag"><i class="devicon-kotlin-plain"></i> Kotlin</span>
-            <span class="skill-tag"><i class="devicon-cplusplus-plain"></i> C/C++</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="skill-category-title">Frontend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-react-original"></i> React.js</span>
-            <span class="skill-tag"><i class="devicon-nextjs-plain"></i> Next.js</span>
-            <span class="skill-tag"><i class="devicon-electron-original"></i> Electron</span>
-            <span class="skill-tag"><i class="devicon-flutter-plain"></i> Flutter</span>
-            <span class="skill-tag"><i class="fas fa-layer-group"></i> TanStack Query</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="skill-category-title">Backend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-nodejs-plain"></i> Node.js</span>
-            <span class="skill-tag"><i class="devicon-express-original"></i> Express.js</span>
-            <span class="skill-tag"><i class="fas fa-plug"></i> REST APIs</span>
-            <span class="skill-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="skill-category-title">Real-Time &amp; Streaming</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-socketio-original"></i> WebSockets</span>
-            <span class="skill-tag"><i class="fas fa-stream"></i> Server-Sent Events</span>
-            <span class="skill-tag"><i class="fas fa-satellite-dish"></i> MQTT</span>
-            <span class="skill-tag"><i class="fas fa-video"></i> LiveKit</span>
-            <span class="skill-tag"><i class="devicon-redis-plain"></i> Redis</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="skill-category-title">Databases</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-            <span class="skill-tag"><i class="devicon-mysql-plain"></i> MySQL</span>
-            <span class="skill-tag"><i class="devicon-sqlite-plain"></i> SQLite</span>
-            <span class="skill-tag"><i class="fas fa-database"></i> NoSQL</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="skill-category-title">Cloud &amp; Tools</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS (S3)</span>
-            <span class="skill-tag"><i class="devicon-docker-plain"></i> Docker</span>
-            <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">05. Certifications</span>
-        <h2 class="section-title">Credentials</h2>
-      </div>
+    <!-- Stack -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Stack</span>
+          <h2 class="section-title">Tools I <span class="serif grad-text">reach for.</span></h2>
+        </div>
 
-      <div class="certs-grid">
-        <div class="cert-card reveal">
-          <div class="cert-badge">
-            <img src="images/aws/raffay-arshad-aws.png" alt="AWS Academy Graduate" />
+        <div class="stack-grid">
+          <div class="stack-card reveal">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <div class="chips">
+              <span class="chip"><i class="devicon-typescript-plain"></i> TypeScript</span>
+              <span class="chip"><i class="devicon-javascript-plain"></i> JavaScript</span>
+              <span class="chip"><i class="devicon-dart-plain"></i> Dart</span>
+              <span class="chip"><i class="fas fa-database"></i> SQL</span>
+              <span class="chip"><i class="devicon-kotlin-plain"></i> Kotlin</span>
+              <span class="chip"><i class="devicon-cplusplus-plain"></i> C/C++</span>
+            </div>
           </div>
-          <div class="cert-info">
-            <h3>AWS Academy Graduate</h3>
-            <p class="cert-desc">AWS Academy Cloud Foundations</p>
-            <p class="cert-meta mono">Amazon Web Services &middot; 2024</p>
-            <a href="https://www.credly.com/badges/cd421e53-854e-49e9-be06-b36c521067f8/print"
-              target="_blank" rel="noopener noreferrer" class="cert-link">
-              View Credential <i class="fas fa-arrow-right"></i>
+
+          <div class="stack-card reveal" style="--delay: .06s">
+            <h3><i class="fas fa-display"></i> Frontend</h3>
+            <div class="chips">
+              <span class="chip"><i class="devicon-react-original"></i> React.js</span>
+              <span class="chip"><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span class="chip"><i class="devicon-redux-original"></i> Redux Toolkit</span>
+              <span class="chip"><i class="fas fa-layer-group"></i> TanStack Query</span>
+              <span class="chip"><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+              <span class="chip"><i class="devicon-electron-original"></i> Electron</span>
+              <span class="chip"><i class="devicon-flutter-plain"></i> Flutter</span>
+            </div>
+          </div>
+
+          <div class="stack-card reveal" style="--delay: .12s">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="chips">
+              <span class="chip"><i class="devicon-nodejs-plain"></i> Node.js</span>
+              <span class="chip"><i class="devicon-express-original"></i> Express.js</span>
+              <span class="chip"><i class="fas fa-plug"></i> REST APIs</span>
+              <span class="chip"><i class="fas fa-cubes"></i> Microservices</span>
+              <span class="chip"><i class="fas fa-list-check"></i> BullMQ</span>
+              <span class="chip"><i class="fas fa-key"></i> OAuth 2.0</span>
+              <span class="chip"><i class="fab fa-chrome"></i> Chrome Extensions</span>
+            </div>
+          </div>
+
+          <div class="stack-card reveal">
+            <h3><i class="fas fa-bolt"></i> Real-time &amp; AI</h3>
+            <div class="chips">
+              <span class="chip"><i class="devicon-socketio-original"></i> WebSockets</span>
+              <span class="chip"><i class="devicon-socketio-original"></i> Socket.IO</span>
+              <span class="chip"><i class="fas fa-stream"></i> Server-Sent Events</span>
+              <span class="chip"><i class="fas fa-satellite-dish"></i> MQTT</span>
+              <span class="chip"><i class="fas fa-video"></i> LiveKit / WebRTC</span>
+              <span class="chip"><i class="fas fa-wand-magic-sparkles"></i> LLM integration</span>
+            </div>
+          </div>
+
+          <div class="stack-card reveal" style="--delay: .06s">
+            <h3><i class="fas fa-database"></i> Data</h3>
+            <div class="chips">
+              <span class="chip"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+              <span class="chip"><i class="devicon-redis-plain"></i> Redis</span>
+              <span class="chip"><i class="devicon-mysql-plain"></i> MySQL</span>
+              <span class="chip"><i class="devicon-sqlite-plain"></i> SQLite</span>
+              <span class="chip"><i class="devicon-firebase-plain"></i> Firebase</span>
+              <span class="chip"><i class="devicon-sequelize-plain"></i> Sequelize</span>
+            </div>
+          </div>
+
+          <div class="stack-card reveal" style="--delay: .12s">
+            <h3><i class="fas fa-cloud"></i> Cloud &amp; DevOps</h3>
+            <div class="chips">
+              <span class="chip"><i class="fab fa-aws"></i> AWS</span>
+              <span class="chip"><i class="devicon-docker-plain"></i> Docker</span>
+              <span class="chip"><i class="fas fa-rotate"></i> CI/CD</span>
+              <span class="chip"><i class="devicon-git-plain"></i> Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recognition -->
+    <section id="recognition" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Recognition &amp; research</span>
+          <h2 class="section-title">Awards, papers and <span class="serif grad-text">credentials.</span></h2>
+        </div>
+
+        <div class="recog-grid">
+          <article id="achievements" class="recog-card award reveal">
+            <a href="https://app.readytensor.ai/publications/geosynthai-vistas-generation-of-satellite-imagery-for-urban-planning-and-development-WQafNm8HW8eT"
+              target="_blank" rel="noopener noreferrer" class="award-media" aria-label="View the GeoSynthAI publication">
+              <img src="./images/ready-tensor/image.png" alt="Outstanding Solution Implementation certificate, Ready Tensor CV Projects Expo 2024" loading="lazy" width="797" height="520" />
+            </a>
+            <div class="recog-body">
+              <span class="recog-tag"><i class="fas fa-trophy"></i> Award · 2024</span>
+              <h3 class="recog-title">Outstanding Solution Implementation</h3>
+              <p class="recog-sub">Ready Tensor CV Projects Expo 2024</p>
+              <p class="recog-text">
+                Our final-year project won the <strong>Outstanding Solution Implementation</strong> award. Several
+                supervisors had turned the idea down as too hard to build, until <strong>Sir Akhtar Jamil</strong>
+                took us on and guided us to the finish. Built with Shoaib Mustafa Khan and Khadija Mehmood, and
+                published on Ready Tensor as <em>GeoSynthAI – Vistas: Generation of Satellite Imagery for Urban
+                Planning and Development</em>.
+              </p>
+              <a href="https://app.readytensor.ai/publications/geosynthai-vistas-generation-of-satellite-imagery-for-urban-planning-and-development-WQafNm8HW8eT"
+                target="_blank" rel="noopener noreferrer" class="text-link">Read the publication <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article id="blogs" class="recog-card pub reveal" style="--delay: .08s">
+            <div class="recog-body">
+              <span class="recog-tag"><i class="fas fa-book"></i> Springer Nature · 2025</span>
+              <h3 class="recog-title">Generative AI-Based Approach for Scalable and Cost-Effective Sustainable Urban Planning Using Satellite Imagery</h3>
+              <p class="recog-sub">Book chapter, Digital Transformation in Interdisciplinary Sciences</p>
+              <p class="recog-text">
+                How generative AI applied to satellite imagery can make sustainable urban planning more scalable
+                and cost-effective.
+              </p>
+              <div class="pub-tags"><span>Generative AI</span><span>Satellite imagery</span><span>Urban planning</span></div>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-91643-4_9" target="_blank" rel="noopener noreferrer" class="text-link">Read on Springer <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <div id="certifications" class="certs reveal" style="--delay: .16s">
+            <a href="https://www.credly.com/badges/cd421e53-854e-49e9-be06-b36c521067f8/print" target="_blank" rel="noopener noreferrer" class="cert-row">
+              <img src="images/aws/raffay-arshad-aws.png" alt="" loading="lazy" width="1287" height="994" />
+              <div>
+                <h3>AWS Academy Graduate</h3>
+                <p>AWS Academy Cloud Foundations · 2024</p>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-a7ce39ac-a5ea-4a37-9b45-6f38b843a30e.pdf" target="_blank" rel="noopener noreferrer" class="cert-row">
+              <img src="images/web-dev-masterclass/image.png" alt="" loading="lazy" width="705" height="522" />
+              <div>
+                <h3>Web Development Masterclass</h3>
+                <p>Udemy · 2024</p>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="cert-card reveal">
-          <div class="cert-badge">
-            <img src="images/web-dev-masterclass/image.png" alt="Web Development Masterclass" />
+    <!-- GitHub Activity -->
+    <section id="activity" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Open source</span>
+          <h2 class="section-title">GitHub <span class="serif grad-text">activity.</span></h2>
+        </div>
+
+        <div class="activity-card reveal">
+          <div class="activity-header">
+            <div class="activity-title">
+              <i class="fab fa-github"></i>
+              <span>@Raffay6671</span>
+            </div>
+            <div class="activity-stats">
+              <div class="activity-stat">
+                <span class="activity-stat-value" id="gh-total">—</span>
+                <span class="activity-stat-label mono" id="gh-total-label">contributions</span>
+              </div>
+              <div class="activity-stat">
+                <span class="activity-stat-value" id="gh-years">—</span>
+                <span class="activity-stat-label mono">years on GitHub</span>
+              </div>
+            </div>
           </div>
-          <div class="cert-info">
-            <h3>Web Development Masterclass</h3>
-            <p class="cert-desc">Full-stack web development fundamentals</p>
-            <p class="cert-meta mono">Udemy &middot; 2024</p>
-            <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-a7ce39ac-a5ea-4a37-9b45-6f38b843a30e.pdf"
-              target="_blank" rel="noopener noreferrer" class="cert-link">
-              View Credential <i class="fas fa-arrow-right"></i>
+
+          <div class="activity-years-tabs" id="gh-year-tabs" role="tablist"></div>
+
+          <div class="activity-chart-wrap">
+            <div class="activity-months" id="gh-months"></div>
+            <div class="activity-grid-container">
+              <div class="activity-weekdays">
+                <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
+              </div>
+              <div class="activity-grid" id="gh-grid" aria-label="GitHub contributions"></div>
+            </div>
+            <div class="activity-tooltip" id="gh-tooltip" role="tooltip"></div>
+          </div>
+
+          <div class="activity-legend">
+            <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" class="activity-profile-link mono">
+              View on GitHub <i class="fas fa-arrow-right"></i>
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements -->
-  <section id="achievements" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">06. Achievements</span>
-        <h2 class="section-title">Recognition</h2>
-      </div>
-
-      <div class="achievement-card reveal">
-        <a href="https://app.readytensor.ai/publications/geosynthai-vistas-generation-of-satellite-imagery-for-urban-planning-and-development-WQafNm8HW8eT"
-           target="_blank" rel="noopener noreferrer" class="achievement-media" aria-label="View GeoSynthAI publication">
-          <img src="./images/ready-tensor/image.png" alt="Outstanding Solution Implementation award — Ready Tensor CV Projects Expo 2024" loading="lazy" />
-        </a>
-        <div class="achievement-body">
-          <span class="achievement-tag mono"><i class="fas fa-trophy"></i> Award · 2024</span>
-          <h3 class="achievement-title">Outstanding Solution Implementation</h3>
-          <p class="achievement-sub mono">Ready Tensor CV Projects Expo 2024</p>
-          <p class="achievement-text">
-            Our Final Year Project was recognized with the <strong>Outstanding Solution Implementation</strong>
-            award at the Ready Tensor CV Projects Expo 2024. The idea was initially turned down by several
-            supervisors as too difficult to implement — until <strong>Sir Akhtar Jamil</strong> took us on,
-            believed in the vision, and guided us to success. Built with teammates Shoaib Mustafa Khan and
-            Khadija Mehmood.
-          </p>
-          <p class="achievement-text">
-            Published on Ready Tensor as <em>GeoSynthAI – Vistas: Generation of Satellite Imagery for Urban
-            Planning and Development</em>.
-          </p>
-          <a href="https://app.readytensor.ai/publications/geosynthai-vistas-generation-of-satellite-imagery-for-urban-planning-and-development-WQafNm8HW8eT"
-             target="_blank" rel="noopener noreferrer" class="cert-link">
-            Read Publication <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blogs -->
-  <section id="blogs" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">07. Publications</span>
-        <h2 class="section-title">Research &amp; Writing</h2>
-      </div>
-
-      <div class="blog-grid reveal">
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-91643-4_9"
-           target="_blank" rel="noopener noreferrer" class="blog-tile">
-          <div class="blog-tile-head">
-            <span class="blog-tag mono"><i class="fas fa-book"></i> Publication</span>
-            <span class="blog-meta mono"><i class="far fa-calendar"></i> 2025</span>
-          </div>
-          <h3 class="blog-tile-title">Generative AI-Based Approach for Scalable and Cost-Effective Sustainable Urban Planning Using Satellite Imagery</h3>
-          <p class="blog-tile-excerpt">
-            A research study exploring how generative AI applied to satellite imagery can make
-            sustainable urban planning more scalable and cost-effective.
-          </p>
-          <div class="blog-tile-tags">
-            <span>Generative AI</span><span>Satellite Imagery</span><span>Urban Planning</span><span>Sustainability</span>
-          </div>
-          <div class="blog-tile-footer">
-            <span class="mono"><i class="fas fa-graduation-cap"></i> Read on Springer</span>
-            <i class="fas fa-arrow-right"></i>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GitHub Activity -->
-  <section id="activity" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">08. GitHub Activity</span>
-        <h2 class="section-title">Contribution History</h2>
-      </div>
-
-      <div class="activity-card reveal">
-        <div class="activity-header">
-          <div class="activity-title">
-            <i class="fab fa-github"></i>
-            <span>@Raffay6671</span>
-          </div>
-          <div class="activity-stats">
-            <div class="activity-stat">
-              <span class="activity-stat-value" id="gh-total">—</span>
-              <span class="activity-stat-label mono" id="gh-total-label">contributions</span>
-            </div>
-            <div class="activity-stat">
-              <span class="activity-stat-value" id="gh-years">—</span>
-              <span class="activity-stat-label mono">years on GitHub</span>
+            <div class="activity-scale">
+              <span class="mono">Less</span>
+              <span class="activity-cell" data-level="0"></span>
+              <span class="activity-cell" data-level="1"></span>
+              <span class="activity-cell" data-level="2"></span>
+              <span class="activity-cell" data-level="3"></span>
+              <span class="activity-cell" data-level="4"></span>
+              <span class="mono">More</span>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="activity-years-tabs" id="gh-year-tabs" role="tablist"></div>
-
-        <div class="activity-chart-wrap">
-          <div class="activity-months" id="gh-months"></div>
-          <div class="activity-grid-container">
-            <div class="activity-weekdays">
-              <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
-            </div>
-            <div class="activity-grid" id="gh-grid" aria-label="GitHub contributions"></div>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="contact-title">Let's build something people <span class="serif grad-text">actually use.</span></h2>
+          <p class="contact-text">
+            I'm open to new opportunities. Whether you have a role, a product idea or just a question, my inbox is
+            always open.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:rafay.abbasi6671@gmail.com" class="btn btn-primary btn-lg"><i class="far fa-envelope"></i> Say hello</a>
+            <a href="./Resume/Raffay_Arshad_Resume.pdf" download="Raffay_Arshad_Resume.pdf" class="btn btn-ghost btn-lg"><i class="fas fa-arrow-down"></i> Download résumé</a>
           </div>
-          <div class="activity-tooltip" id="gh-tooltip" role="tooltip"></div>
-        </div>
-
-        <div class="activity-legend">
-          <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" class="activity-profile-link mono">
-            View on GitHub <i class="fas fa-arrow-right"></i>
-          </a>
-          <div class="activity-scale">
-            <span class="mono">Less</span>
-            <span class="activity-cell" data-level="0"></span>
-            <span class="activity-cell" data-level="1"></span>
-            <span class="activity-cell" data-level="2"></span>
-            <span class="activity-cell" data-level="3"></span>
-            <span class="activity-cell" data-level="4"></span>
-            <span class="mono">More</span>
+          <div class="contact-links">
+            <a href="mailto:rafay.abbasi6671@gmail.com" class="contact-link"><i class="far fa-envelope"></i> rafay.abbasi6671@gmail.com</a>
+            <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-linkedin-in"></i> rafay-abbasi</a>
+            <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-github"></i> Raffay6671</a>
+            <a href="https://medium.com/@rafay.abbasi6671" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-medium"></i> Medium</a>
+            <a href="tel:+923201939633" class="contact-link"><i class="fas fa-phone"></i> +92 320 1939633</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono">09. Contact</span>
-        <h2 class="section-title">Get In Touch</h2>
-      </div>
-      <div class="contact-content reveal">
-        <p class="contact-text">
-          I'm currently open to new opportunities. Whether you have a question
-          or just want to say hi — my inbox is always open.
-        </p>
-        <div class="contact-methods">
-          <a href="mailto:rafay.abbasi6671@gmail.com" class="contact-method">
-            <i class="far fa-envelope"></i>
-            <span>rafay.abbasi6671@gmail.com</span>
-          </a>
-          <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <i class="fab fa-linkedin"></i>
-            <span>linkedin.com/in/rafay-abbasi</span>
-          </a>
-          <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <i class="fab fa-github"></i>
-            <span>github.com/Raffay6671</span>
-          </a>
-          <a href="https://medium.com/@rafay.abbasi6671" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <i class="fab fa-medium"></i>
-            <span>medium.com/@rafay.abbasi6671</span>
-          </a>
-          <a href="tel:+923201939633" class="contact-method">
-            <i class="fas fa-phone"></i>
-            <span>+92 320 1939633</span>
-          </a>
-        </div>
-        <a href="mailto:rafay.abbasi6671@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
@@ -705,16 +979,15 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <p class="footer-credit">
-        Designed & Built by <strong>Raffay Arshad</strong>
-      </p>
+    <div class="container">
+      <div class="footer-content">
+      <p class="footer-credit">Designed &amp; built by <strong>Raffay Arshad</strong> · Islamabad, Pakistan</p>
       <div class="footer-links">
         <a href="https://github.com/Raffay6671" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
-            class="fab fa-linkedin"></i></a>
+        <a href="https://linkedin.com/in/rafay-abbasi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://medium.com/@rafay.abbasi6671" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fab fa-medium"></i></a>
         <a href="mailto:rafay.abbasi6671@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+      </div>
       </div>
     </div>
   </footer>
@@ -722,142 +995,125 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-      // --- Smooth Scrolling ---
-      const headerHeight = () => document.getElementById("header").offsetHeight;
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      // --- Smooth scrolling (offset comes from scroll-padding-top in CSS) ---
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const href = this.getAttribute("href");
-          if (href === "#" || href === "") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          } else {
-            const target = document.getElementById(href.substring(1));
-            if (target) {
-              window.scrollTo({ top: target.offsetTop - headerHeight(), behavior: "smooth" });
-            }
+          var href = this.getAttribute("href");
+          var target = href.length > 1 ? document.getElementById(href.substring(1)) : null;
+          if (href === "#" || target) {
+            e.preventDefault();
+            if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+            else window.scrollTo({ top: 0, behavior: "smooth" });
           }
-          document.body.classList.remove('menu-open');
+          document.body.classList.remove("menu-open");
         });
       });
 
       // --- Header scroll effect ---
-      const header = document.getElementById("header");
-      window.addEventListener("scroll", () => {
-        header.classList.toggle("scrolled", window.scrollY > 50);
-      });
+      var header = document.getElementById("header");
+      function onScroll() { header.classList.toggle("scrolled", window.scrollY > 40); }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
 
       // --- Mobile menu toggle ---
-      document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("menu-toggle").addEventListener("click", function () {
         document.body.classList.toggle("menu-open");
       });
 
-      // --- Dark Mode ---
-      const themeBtn = document.getElementById("theme-toggle");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      // --- Theme ---
+      var themeBtn = document.getElementById("theme-toggle");
+      var themeMeta = document.querySelector('meta[name="theme-color"]');
 
       function setTheme(mode) {
         document.documentElement.setAttribute("data-theme", mode);
         themeBtn.classList.toggle("dark", mode === "dark");
+        if (themeMeta) themeMeta.setAttribute("content", mode === "dark" ? "#0a0a0b" : "#f7f6f3");
       }
 
       try {
-        const saved = localStorage.getItem("theme");
-        setTheme(saved || "dark");
-      } catch (e) { setTheme("light"); }
+        setTheme(localStorage.getItem("theme") || "dark");
+      } catch (e) { setTheme("dark"); }
 
-      themeBtn.addEventListener("click", () => {
-        const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      themeBtn.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
         setTheme(next);
         try { localStorage.setItem("theme", next); } catch (e) { }
       });
 
-      // --- Typing Effect ---
-      const titles = ["Full Stack Engineer", "Real-Time Systems Developer", "React & Node.js Developer", "Web · Desktop · Mobile"];
-      let titleIdx = 0, charIdx = 0, deleting = false;
-      const typedEl = document.getElementById("typed-text");
-
-      function type() {
-        const current = titles[titleIdx];
-        typedEl.textContent = current.substring(0, charIdx);
-
-        if (!deleting) {
-          charIdx++;
-          if (charIdx > current.length) {
-            deleting = true;
-            setTimeout(type, 2000);
-            return;
-          }
-        } else {
-          charIdx--;
-          if (charIdx === 0) {
-            deleting = false;
-            titleIdx = (titleIdx + 1) % titles.length;
-          }
-        }
-        setTimeout(type, deleting ? 40 : 80);
-      }
-      type();
-
-      // --- Scroll Reveal ---
-      const reveals = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+      // --- Scroll reveal ---
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("revealed");
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-      reveals.forEach(el => observer.observe(el));
+      }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+      document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
 
-      // --- Animated Counters ---
-      const counters = document.querySelectorAll(".stat-number");
-      const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const target = parseInt(el.getAttribute("data-count"));
-            let count = 0;
-            const increment = Math.max(1, Math.floor(target / 30));
-            const timer = setInterval(() => {
-              count += increment;
-              if (count >= target) { count = target; clearInterval(timer); }
-              el.textContent = count;
-            }, 50);
-            counterObserver.unobserve(el);
-          }
+      // --- Active nav link ---
+      var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+      var linkFor = {};
+      navLinks.forEach(function (link) {
+        var id = link.getAttribute("href").substring(1);
+        if (document.getElementById(id)) linkFor[id] = link;
+      });
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach(function (link) { link.classList.remove("active"); });
+          if (linkFor[entry.target.id]) linkFor[entry.target.id].classList.add("active");
+        });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      spy.observe(document.querySelector(".hero"));
+      Object.keys(linkFor).forEach(function (id) { spy.observe(document.getElementById(id)); });
+
+      // --- Animated counters ---
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var target = parseInt(el.getAttribute("data-count"), 10);
+          var count = 0;
+          var increment = Math.max(1, Math.floor(target / 30));
+          var timer = setInterval(function () {
+            count += increment;
+            if (count >= target) { count = target; clearInterval(timer); }
+            el.textContent = count;
+          }, 50);
+          counterObserver.unobserve(el);
         });
       }, { threshold: 0.5 });
-      counters.forEach(el => counterObserver.observe(el));
+      document.querySelectorAll(".stat-number").forEach(function (el) { counterObserver.observe(el); });
 
       // --- Lightbox ---
-      const lightbox = document.getElementById("lightbox");
-      const lbImg = document.getElementById("lightbox-img");
-      const lbCurrent = document.getElementById("lightbox-current");
-      const lbTotal = document.getElementById("lightbox-total");
-      const lbThumbs = document.getElementById("lightbox-thumbs");
-      const lbWrapper = lightbox.querySelector(".lightbox-img-wrapper");
-      let lbImages = [];
-      let lbIdx = 0;
+      var lightbox = document.getElementById("lightbox");
+      var lbImg = document.getElementById("lightbox-img");
+      var lbCurrent = document.getElementById("lightbox-current");
+      var lbTotal = document.getElementById("lightbox-total");
+      var lbThumbs = document.getElementById("lightbox-thumbs");
+      var lbWrapper = lightbox.querySelector(".lightbox-img-wrapper");
+      var lbSpinner = document.getElementById("lightbox-spinner");
+      var lbImages = [];
+      var lbIdx = 0;
 
       function openLightbox(images, startIdx) {
         lbImages = images;
         lbIdx = startIdx || 0;
         lbTotal.textContent = images.length;
         lbThumbs.innerHTML = "";
-        images.forEach(function(src, i) {
+        images.forEach(function (src, i) {
           var thumb = document.createElement("img");
           thumb.src = src;
+          thumb.alt = "";
           thumb.className = "lightbox-thumb" + (i === lbIdx ? " active" : "");
-          thumb.addEventListener("click", function() { showLbImage(i); });
+          thumb.addEventListener("click", function () { showLbImage(i); });
           lbThumbs.appendChild(thumb);
         });
         showLbImage(lbIdx);
         lightbox.classList.add("active");
         document.body.style.overflow = "hidden";
       }
-
-      var lbSpinner = document.getElementById("lightbox-spinner");
 
       function showLbImage(idx) {
         lbIdx = idx;
@@ -867,7 +1123,7 @@
         lbImg.alt = "Project image " + (idx + 1) + " of " + lbImages.length;
         lbCurrent.textContent = idx + 1;
         zoom = 1;
-        lbThumbs.querySelectorAll(".lightbox-thumb").forEach(function(t, i) {
+        lbThumbs.querySelectorAll(".lightbox-thumb").forEach(function (t, i) {
           t.classList.toggle("active", i === idx);
         });
       }
@@ -882,14 +1138,14 @@
 
       lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
       lightbox.querySelector(".lightbox-overlay").addEventListener("click", closeLightbox);
-      lightbox.querySelector(".lightbox-prev").addEventListener("click", function() {
+      lightbox.querySelector(".lightbox-prev").addEventListener("click", function () {
         showLbImage(lbIdx > 0 ? lbIdx - 1 : lbImages.length - 1);
       });
-      lightbox.querySelector(".lightbox-next").addEventListener("click", function() {
+      lightbox.querySelector(".lightbox-next").addEventListener("click", function () {
         showLbImage(lbIdx < lbImages.length - 1 ? lbIdx + 1 : 0);
       });
 
-      // --- Zoom & Pan ---
+      // --- Zoom & pan ---
       var zoom = 1;
       var fitZoomLevel = 1;
       var maxZoom = 1;
@@ -901,33 +1157,22 @@
         zoom = Math.min(maxZoom, Math.max(fitZoomLevel, newZoom));
         zoomLevelEl.textContent = Math.round(zoom * 100) + "%";
 
-        // Calculate scroll to keep the point under cursor/finger steady
-        var wrapW = lbWrapper.clientWidth;
-        var wrapH = lbWrapper.clientHeight;
-        var scrollX = lbWrapper.scrollLeft;
-        var scrollY = lbWrapper.scrollTop;
+        var cx = (centerX !== undefined) ? centerX : lbWrapper.clientWidth / 2;
+        var cy = (centerY !== undefined) ? centerY : lbWrapper.clientHeight / 2;
+        var pointX = (lbWrapper.scrollLeft + cx) / oldZoom;
+        var pointY = (lbWrapper.scrollTop + cy) / oldZoom;
 
-        // Point in content space before zoom
-        var cx = (centerX !== undefined) ? centerX : wrapW / 2;
-        var cy = (centerY !== undefined) ? centerY : wrapH / 2;
-        var pointX = (scrollX + cx) / oldZoom;
-        var pointY = (scrollY + cy) / oldZoom;
-
-        // Apply zoom
         lbImg.style.width = (lbImg.naturalWidth * zoom) + "px";
         lbImg.style.height = (lbImg.naturalHeight * zoom) + "px";
 
-        // Scroll so the same point stays under cursor
         lbWrapper.scrollLeft = pointX * zoom - cx;
         lbWrapper.scrollTop = pointY * zoom - cy;
       }
 
       function resetZoom() {
-        var wrapW = lbWrapper.clientWidth;
-        var wrapH = lbWrapper.clientHeight;
         var natW = lbImg.naturalWidth || 800;
         var natH = lbImg.naturalHeight || 600;
-        fitZoomLevel = Math.min(wrapW / natW, wrapH / natH, 1);
+        fitZoomLevel = Math.min(lbWrapper.clientWidth / natW, lbWrapper.clientHeight / natH, 1);
         zoom = fitZoomLevel;
         zoomLevelEl.textContent = Math.round(zoom * 100) + "%";
         lbImg.style.width = (natW * zoom) + "px";
@@ -936,30 +1181,23 @@
         lbWrapper.scrollTop = 0;
       }
 
-      // Wait for image to load then fit and show
-      lbImg.addEventListener("load", function() {
+      lbImg.addEventListener("load", function () {
         resetZoom();
         lbImg.classList.remove("loading");
         lbSpinner.style.display = "none";
       });
 
-      // Zoom buttons
-      document.getElementById("lb-zoom-in").addEventListener("click", function() { setZoom(zoom + zoomStep); });
-      document.getElementById("lb-zoom-out").addEventListener("click", function() { setZoom(zoom - zoomStep); });
+      document.getElementById("lb-zoom-in").addEventListener("click", function () { setZoom(zoom + zoomStep); });
+      document.getElementById("lb-zoom-out").addEventListener("click", function () { setZoom(zoom - zoomStep); });
       document.getElementById("lb-zoom-reset").addEventListener("click", resetZoom);
 
-      // Scroll wheel zoom (desktop)
-      lbWrapper.addEventListener("wheel", function(e) {
+      lbWrapper.addEventListener("wheel", function (e) {
         e.preventDefault();
         var rect = lbWrapper.getBoundingClientRect();
-        var cx = e.clientX - rect.left;
-        var cy = e.clientY - rect.top;
-        var delta = e.deltaY > 0 ? -zoomStep : zoomStep;
-        setZoom(zoom + delta, cx, cy);
+        setZoom(zoom + (e.deltaY > 0 ? -zoomStep : zoomStep), e.clientX - rect.left, e.clientY - rect.top);
       }, { passive: false });
 
-      // Double-click to toggle zoom
-      lbWrapper.addEventListener("dblclick", function(e) {
+      lbWrapper.addEventListener("dblclick", function (e) {
         if (zoom > fitZoomLevel) {
           resetZoom();
         } else {
@@ -968,9 +1206,8 @@
         }
       });
 
-      // Drag to pan (desktop)
       var isDragging = false, dragStartX, dragStartY, scrollStartX, scrollStartY;
-      lbWrapper.addEventListener("mousedown", function(e) {
+      lbWrapper.addEventListener("mousedown", function (e) {
         if (e.target !== lbImg) return;
         isDragging = true;
         dragStartX = e.clientX;
@@ -980,19 +1217,18 @@
         lbWrapper.style.cursor = "grabbing";
         e.preventDefault();
       });
-      document.addEventListener("mousemove", function(e) {
+      document.addEventListener("mousemove", function (e) {
         if (!isDragging) return;
         lbWrapper.scrollLeft = scrollStartX - (e.clientX - dragStartX);
         lbWrapper.scrollTop = scrollStartY - (e.clientY - dragStartY);
       });
-      document.addEventListener("mouseup", function() {
+      document.addEventListener("mouseup", function () {
         isDragging = false;
         lbWrapper.style.cursor = "";
       });
 
-      // Pinch to zoom (mobile)
       var lastPinchDist = 0;
-      lbWrapper.addEventListener("touchstart", function(e) {
+      lbWrapper.addEventListener("touchstart", function (e) {
         if (e.touches.length === 2) {
           lastPinchDist = Math.hypot(
             e.touches[0].clientX - e.touches[1].clientX,
@@ -1002,24 +1238,22 @@
         }
       }, { passive: false });
 
-      lbWrapper.addEventListener("touchmove", function(e) {
+      lbWrapper.addEventListener("touchmove", function (e) {
         if (e.touches.length === 2) {
           e.preventDefault();
           var dist = Math.hypot(
             e.touches[0].clientX - e.touches[1].clientX,
             e.touches[0].clientY - e.touches[1].clientY
           );
-          var delta = (dist - lastPinchDist) * 0.008;
           var rect = lbWrapper.getBoundingClientRect();
           var cx = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - rect.left;
           var cy = ((e.touches[0].clientY + e.touches[1].clientY) / 2) - rect.top;
-          setZoom(zoom + delta, cx, cy);
+          setZoom(zoom + (dist - lastPinchDist) * 0.008, cx, cy);
           lastPinchDist = dist;
         }
       }, { passive: false });
 
-      // Keyboard
-      document.addEventListener("keydown", function(e) {
+      document.addEventListener("keydown", function (e) {
         if (!lightbox.classList.contains("active")) return;
         if (e.key === "Escape") closeLightbox();
         if (e.key === "ArrowLeft") showLbImage(lbIdx > 0 ? lbIdx - 1 : lbImages.length - 1);
@@ -1029,25 +1263,23 @@
         if (e.key === "0") resetZoom();
       });
 
-      // Bind gallery buttons
-      document.querySelectorAll(".btn-view-gallery").forEach(function(btn) {
-        if (btn.tagName === "A") return; // skip PDF links
-        btn.addEventListener("click", function() {
-          var card = btn.closest(".project-card");
-          var data = card.getAttribute("data-images");
-          if (data) {
-            openLightbox(JSON.parse(data), 0);
-          }
+      // Galleries open from each card's cover
+      document.querySelectorAll(".project-card[data-images]").forEach(function (card) {
+        var images = JSON.parse(card.getAttribute("data-images"));
+        card.querySelectorAll("[data-gallery]").forEach(function (trigger) {
+          trigger.addEventListener("click", function () { openLightbox(images, 0); });
+          trigger.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(images, 0); }
+          });
         });
       });
-
 
     });
   </script>
 
   <!-- GitHub Contributions Chart -->
   <script>
-    (function() {
+    (function () {
       var USERNAME = "Raffay6671";
       var API = "https://github-contributions-api.jogruber.de/v4/" + USERNAME + "?y=all";
 
@@ -1068,8 +1300,7 @@
       }
 
       function showTooltip(e, contribs, iso) {
-        var txt = (contribs === 0 ? "No contributions" : contribs + " contribution" + (contribs === 1 ? "" : "s")) + " on " + fmtDate(iso);
-        tooltip.textContent = txt;
+        tooltip.textContent = (contribs === 0 ? "No contributions" : contribs + " contribution" + (contribs === 1 ? "" : "s")) + " on " + fmtDate(iso);
         tooltip.classList.add("show");
         var wrap = tooltip.offsetParent || tooltip.parentElement;
         var wrapRect = wrap.getBoundingClientRect();
@@ -1087,8 +1318,7 @@
 
         var first = new Date(contributions[0].date + "T00:00:00");
         var leadPad = first.getDay(); // 0=Sun
-        var totalCells = leadPad + contributions.length;
-        var totalWeeks = Math.ceil(totalCells / 7);
+        var totalWeeks = Math.ceil((leadPad + contributions.length) / 7);
 
         grid.style.setProperty("--weeks", totalWeeks);
         grid.style.gridTemplateColumns = "repeat(" + totalWeeks + ", minmax(0, 1fr))";
@@ -1103,17 +1333,16 @@
         var monthLabels = [];
         var prevMonth = -1;
 
-        contributions.forEach(function(day, idx) {
+        contributions.forEach(function (day, idx) {
           var d = new Date(day.date + "T00:00:00");
-          var absIdx = leadPad + idx;
-          var weekCol = Math.floor(absIdx / 7) + 1; // 1-based grid column
+          var weekCol = Math.floor((leadPad + idx) / 7) + 1; // 1-based grid column
 
           var cell = document.createElement("span");
           cell.className = "activity-cell";
           cell.setAttribute("data-level", day.level != null ? day.level : 0);
           cell.setAttribute("data-count", day.count);
           cell.setAttribute("data-date", day.date);
-          cell.addEventListener("mouseenter", function(e) { showTooltip(e, day.count, day.date); });
+          cell.addEventListener("mouseenter", function (e) { showTooltip(e, day.count, day.date); });
           cell.addEventListener("mouseleave", hideTooltip);
           grid.appendChild(cell);
 
@@ -1131,7 +1360,7 @@
         var monthsInner = document.createElement("div");
         monthsInner.className = "activity-months-inner";
         monthsInner.style.gridTemplateColumns = "repeat(" + totalWeeks + ", minmax(0, 1fr))";
-        monthLabels.forEach(function(ml) {
+        monthLabels.forEach(function (ml) {
           var label = document.createElement("span");
           label.textContent = ml.name;
           label.style.gridColumn = ml.col;
@@ -1141,8 +1370,7 @@
       }
 
       function updateTotal(contribs) {
-        var sum = contribs.reduce(function(s, d) { return s + d.count; }, 0);
-        totalEl.textContent = fmtNum(sum);
+        totalEl.textContent = fmtNum(contribs.reduce(function (s, d) { return s + d.count; }, 0));
         var lbl = document.getElementById("gh-total-label");
         if (lbl && contribs.length) {
           lbl.textContent = "contributions in " + contribs[0].date.slice(0, 4);
@@ -1150,36 +1378,36 @@
       }
 
       function setActiveTab(year) {
-        Array.prototype.forEach.call(tabs.children, function(btn) {
+        Array.prototype.forEach.call(tabs.children, function (btn) {
           btn.classList.toggle("active", btn.dataset.year === String(year));
         });
       }
 
       fetch(API)
-        .then(function(r) { if (!r.ok) throw new Error("API " + r.status); return r.json(); })
-        .then(function(data) {
+        .then(function (r) { if (!r.ok) throw new Error("API " + r.status); return r.json(); })
+        .then(function (data) {
           var byYear = {};
-          data.contributions.forEach(function(d) {
+          data.contributions.forEach(function (d) {
             var y = d.date.slice(0, 4);
             if (!byYear[y]) byYear[y] = [];
             byYear[y].push(d);
           });
 
-          var years = Object.keys(byYear).sort(function(a, b) { return b.localeCompare(a); });
+          var years = Object.keys(byYear).sort(function (a, b) { return b.localeCompare(a); });
           var total = data.total && data.total.total != null
             ? data.total.total
-            : data.contributions.reduce(function(s, d) { return s + d.count; }, 0);
+            : data.contributions.reduce(function (s, d) { return s + d.count; }, 0);
 
           totalEl.textContent = fmtNum(total);
           yearsEl.textContent = years.length;
 
           tabs.innerHTML = "";
-          years.forEach(function(y, i) {
+          years.forEach(function (y, i) {
             var btn = document.createElement("button");
             btn.className = "activity-year-tab" + (i === 0 ? " active" : "");
             btn.dataset.year = y;
             btn.textContent = y;
-            btn.addEventListener("click", function() {
+            btn.addEventListener("click", function () {
               setActiveTab(y);
               renderYear(byYear[y]);
               updateTotal(byYear[y]);
@@ -1192,8 +1420,8 @@
             updateTotal(byYear[years[0]]);
           }
         })
-        .catch(function(err) {
-          grid.innerHTML = '<span style="grid-column:1/-1;grid-row:1/-1;color:var(--text-muted);font-family:var(--mono);font-size:.8rem;padding:20px;">Unable to load contributions. <a href="https://github.com/' + USERNAME + '" target="_blank" style="color:var(--accent)">View on GitHub</a></span>';
+        .catch(function () {
+          grid.innerHTML = '<span style="grid-column:1/-1;grid-row:1/-1;color:var(--text-3);font-family:var(--mono);font-size:.8rem;padding:20px;">Unable to load contributions. <a href="https://github.com/' + USERNAME + '" target="_blank" style="color:var(--accent)">View on GitHub</a></span>';
           totalEl.textContent = "—";
           yearsEl.textContent = "—";
         });
