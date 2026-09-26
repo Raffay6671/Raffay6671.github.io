@@ -1776,6 +1776,89 @@ button {
   color: var(--accent);
 }
 
+/* Transcriber: real screens in a browser frame, plus a thumbnail strip */
+.feature + .feature {
+  border-top: 0;
+}
+
+.feature.alt {
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 40%, rgba(255, 179, 71, 0.12), transparent 70%),
+    var(--bg);
+}
+
+.screen-frame {
+  --s-border: rgba(255, 255, 255, 0.08);
+  --s-text-3: #6b6b74;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0f12;
+  box-shadow:
+    0 60px 120px -40px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(0, 0, 0, 0.3),
+    0 0 80px -20px var(--glow);
+}
+
+.screen-main {
+  display: block;
+  cursor: zoom-in;
+}
+
+.screen-main img {
+  width: 100%;
+  height: auto;
+}
+
+.thumb-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  cursor: zoom-in;
+  transition: border-color var(--t), transform var(--t);
+}
+
+.thumb:hover {
+  border-color: var(--accent-line);
+  transform: translateY(-2px);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 0.6s var(--ease);
+}
+
+.thumb:hover img {
+  transform: scale(1.04);
+}
+
+.thumb span {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(10, 10, 12, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
 /* ========== Projects (bento) ========== */
 .bento {
   display: grid;
@@ -3040,6 +3123,10 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .thumb-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .arch-flow {
     grid-template-columns: 1fr;
   }
@@ -3183,6 +3270,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .thumb-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .thumb:nth-child(5) {
+    display: none;
+  }
+
   .arch,
   .role {
     padding: 24px 20px;
@@ -3247,4 +3342,9 @@ footer {
     opacity: 1;
     transform: none;
   }
+}
+
+/* covers without a gallery (diagram art) should not promise a zoom */
+.project-cover[aria-hidden="true"] {
+  cursor: default;
 }
