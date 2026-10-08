@@ -1080,6 +1080,10 @@ button {
   margin: 0 auto;
 }
 
+.product-shot + .product-shot {
+  margin-top: 72px;
+}
+
 .shot-frame {
   position: relative;
 }
